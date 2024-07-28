@@ -1,10 +1,11 @@
 ---
+import AnimateOnScroll from "@/components/layout/AnimateOnScroll.astro";
 import BaseHead from "@/components/layout/base-head.astro";
+import Footer from "@/components/layout/footer.astro";
+import Header from "@/components/layout/header.astro";
 import TailwindIndicator from "@/components/layout/tailwind-indicator.astro";
 import { cn } from "@/utils/cn";
 
-// Supports weights 200-800
-import "@fontsource-variable/bricolage-grotesque";
 type Props = {
   title: string;
   description?: string;
@@ -20,7 +21,17 @@ const { title, description, bodyClass } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
   <body class={cn("flex flex-col min-h-screen", bodyClass)}>
-    <slot />
     <TailwindIndicator />
+    <Header />
+
+    <main id="main-content" data-vtbot-replace="main">
+      <div
+        class="absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(252,152,81,0.15),rgba(255,255,255,0))]"
+      >
+      </div>
+      <slot />
+    </main>
+    <Footer />
+    <AnimateOnScroll />
   </body>
 </html>

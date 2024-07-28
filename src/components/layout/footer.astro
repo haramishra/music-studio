@@ -1,72 +1,64 @@
 ---
-import { footerLinks, siteConfig } from "@/config/site";
-import { cn } from "@/utils/cn";
 import { Icon } from "astro-icon/components";
-
-type Props = {
-  className?: string;
-};
-
-const { className } = Astro.props;
 ---
 
-<footer class={cn("border-t", className)}>
-  <div
-    class="container grid grid-cols-1 gap-6 py-14 sm:grid-cols-2 md:grid-cols-5"
-  >
-    {
-      footerLinks.map((section) => (
-        <div>
-          <span class="text-sm font-medium text-foreground">
-            {section.title}
-          </span>
-          <ul class="mt-4 list-inside space-y-3">
-            {section.items?.map((link) => (
-              <li>
-                <a
-                  href={link.href}
-                  class="text-sm text-muted-foreground hover:text-primary"
-                >
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))
-    }
-    <div class="flex flex-col items-end md:col-span-2">
-      Form Newsletter coming soon!
-      <!-- <NewsletterForm client:only="react" /> -->
+<footer class="py-12 md:py-20 bg-black">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap -mx-4 mb-16">
+      <div class="w-full lg:w-4/12 xl:w-5/12 px-4 mb-8 lg:mb-0">
+        <a class="inline-block" href="#">
+          <Icon name="logo-asitra-white" />
+        </a>
+      </div>
+      <div class="w-full lg:w-8/12 xl:w-7/12 px-4">
+        <ul class="flex flex-wrap -mb-2 items-center lg:justify-end">
+          <li class="mb-2 mr-14">
+            <a class="inline-block text-white hover:text-coolGray-400" href="#"
+              >Contact</a
+            >
+          </li>
+          <li class="mb-2 mr-14">
+            <a class="inline-block text-white hover:text-coolGray-400" href="#"
+              >Blog</a
+            >
+          </li>
+          <li class="mb-2 mr-14">
+            <a class="inline-block text-white hover:text-coolGray-400" href="#"
+              >Our Storry</a
+            >
+          </li>
+          <li class="mb-2 mr-14">
+            <a class="inline-block text-white hover:text-coolGray-400" href="#"
+              >Careers</a
+            >
+          </li>
+          <li class="mb-2 mr-14">
+            <a class="inline-block text-white hover:text-coolGray-400" href="#"
+              >Support</a
+            >
+          </li>
+          <li class="mb-2">
+            <a class="inline-block text-white hover:text-coolGray-400" href="#"
+              >Guides</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="border-t py-4">
-    <div class="container flex items-center justify-between">
-      <!-- <span class="text-muted-foreground text-sm">
-        Copyright &copy; 2024. All rights reserved.
-      </span> -->
-      <p class="text-left text-sm text-muted-foreground">
-        Built by{" "}
-        <a
-          href="https://kohi.studio"
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          Kohi studio
-        </a>
-      </p>
-
-      <div class="flex items-center gap-3">
-        <a
-          href={siteConfig.links.github}
-          target="_blank"
-          rel="noreferrer"
-          class="font-medium underline underline-offset-4"
-        >
-          <Icon name="github" class="size-5" />
-        </a>
+    <div class="flex flex-wrap -mx-4 items-center">
+      <div class="w-full sm:w-1/2 px-4 mb-6 sm:mb-0">
+        <span class="text-sm text-coolGray-600">© 2023 Realestate.co</span>
+      </div>
+      <div class="w-full sm:w-1/2 px-4 sm:text-right">
+        <div class="-mb-2">
+          <a
+            class="inline-block text-sm mb-2 mr-12 text-coolGray-600 hover:text-coolGray-500"
+            href="#">Terms of Use</a
+          ><a
+            class="inline-block text-sm mb-2 text-coolGray-600 hover:text-coolGray-500"
+            href="#">Privacy Policy</a
+          >
+        </div>
       </div>
     </div>
   </div>

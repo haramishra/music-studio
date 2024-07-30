@@ -1,3 +1,7 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section class="py-12 md:py-20 bg-coolGray-50">
   <div class="container mx-auto px-4">
     <h1
@@ -29,7 +33,7 @@
                 <svg
                   width="10"
                   height="10"
-                  viewbox="0 0 10 10"
+                  viewBox="0 0 10 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -53,9 +57,11 @@
           </div>
         </div>
         <div class="w-full lg:w-5/12">
-          <img
+          <Image
+            height={400}
+            width={400}
             class="block w-full rounded-4xl"
-            src="asitrastudio-assets/features/photo-medium-dark.png"
+            src="/asitrastudio-assets/features/photo-medium-dark.png"
             alt=""
           />
         </div>
@@ -68,7 +74,7 @@
         <div class="w-full lg:w-5/12 order-last lg:order-first">
           <img
             class="block w-full rounded-4xl"
-            src="asitrastudio-assets/features/photo-medium-light.png"
+            src="/asitrastudio-assets/features/photo-medium-light.png"
             alt=""
           />
         </div>
@@ -92,7 +98,7 @@
                 <svg
                   width="10"
                   height="10"
-                  viewbox="0 0 10 10"
+                  viewBox="0 0 10 10"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >

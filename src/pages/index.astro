@@ -1,12 +1,18 @@
 ---
 import Hero from "@/components/sections/hero.astro";
+import Portfolio from "@/components/sections/portfolio.astro";
 import Services from "@/components/sections/services.astro";
 import Testimonials from "@/components/sections/testimonials.astro";
+import CTA from "@/components/sections/cta.astro";
 import BaseLayout from "@/layouts/base-layout.astro";
+import Contact from "@/components/sections/contact.astro";
 ---
 
 <BaseLayout title="Home">
   <Hero />
+  <Portfolio />
   <Services />
   <Testimonials />
+  <CTA />
+  <Contact />
 </BaseLayout>

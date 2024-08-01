@@ -638,6 +638,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/bricolage-grotesque@npm:^5.0.7":
+  version: 5.0.7
+  resolution: "@fontsource-variable/bricolage-grotesque@npm:5.0.7"
+  checksum: 10c0/8d1aa1a7050ee2134a31549f99a02f4c24593010a4a084de9c7947e2d8d66c75a14d913d3534690d4873466c2fc21532dd1c394c097bdeabb07837339b693f96
+  languageName: node
+  linkType: hard
+
 "@iconify/tools@npm:^3.0.1":
   version: 3.0.7
   resolution: "@iconify/tools@npm:3.0.7"
@@ -4166,6 +4173,7 @@ __metadata:
     "@astrojs/check": "npm:^0.8.3"
     "@astrojs/sitemap": "npm:^3.1.6"
     "@astrojs/tailwind": "npm:^5.1.0"
+    "@fontsource-variable/bricolage-grotesque": "npm:^5.0.7"
     "@tailwindcss/typography": "npm:^0.5.13"
     animate.css: "npm:^4.1.1"
     astro: "npm:^4.12.2"

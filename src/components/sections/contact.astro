@@ -7,7 +7,7 @@ import ImageMod from "../image-mod.astro";
   <div class="mx-auto px-4">
     <div class="flex flex-wrap -mx-4">
       <div class="w-full lg:w-1/2 xl:w-5/12 px-4 mb-16 lg:mb-0">
-        <div class="max-w-lg mx-auto lg:mx-0 pt-14 pb-12 lg:py-20">
+        <div class="max-w-lg mx-auto lg:mx-0 pb-12">
           <h1
             class="font-heading text-6xl xs:text-8xl sm:text-9xl xl:text-10xl tracking-tighter mb-8"
           >
@@ -76,14 +76,13 @@ import ImageMod from "../image-mod.astro";
           </form>
         </div>
       </div>
-      <div class="w-full lg:w-1/2 xl:w-7/12 px-4">
-        <ImageMod
-          height={600}
-          width={400}
-          class="block max-w-lg mx-auto lg:max-w-none h-full w-full rounded-4xl object-cover"
-          src="/asitrastudio-assets/contacts/map-color.png"
-          alt=""
-        />
+      <div class="w-full lg:h-[90vh] h-[50vh] lg:w-1/2 xl:w-7/12 px-4">
+        <iframe
+          class="w-full h-full"
+          id="gmap_canvas"
+          style={{ borderRadius: "24px" }}
+          src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=19&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"></iframe>
       </div>
     </div>
   </div>

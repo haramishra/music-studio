@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import CtaButton from "../cta-button.astro";
+import ImageMod from "../image-mod.astro";
 const points = [
   "State-of-the-art recording equipments.",
   "Flexible booking options.",
@@ -57,8 +58,8 @@ const points = [
           </div>
         </div>
         <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
-          <Image
-            src="/src/assets/images/cta-img.jpg"
+          <ImageMod
+            src="/images/cta-img.jpg"
             alt="cta signup"
             class="rounded-lg"
             width={800}

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import CtaButton from "../cta-button.astro";
+import ImageMod from "../image-mod.astro";
 
 const hero = {
   title: "Where Creativity Meets Harmony",
@@ -31,11 +32,11 @@ const hero = {
   </div>
   <div class="flex flex-wrap -mx-3 align-items-end">
     <div class="w-full md:w-6/12 lg:w-7/12 px-3 relative">
-      <Image
+      <ImageMod
         height={200}
         width={400}
         class="block w-full h-64 lg:h-96 hover:-translate-y-2 transition duration-500 rounded-t-xl object-cover"
-        src="/src/assets/images/hero1.jpg"
+        src="/images/hero1.jpg"
         alt=""
       />
     </div>
@@ -46,7 +47,7 @@ const hero = {
             height={400}
             width={200}
             class="block w-full h-64 lg:h-96 hover:-translate-y-2 transition duration-500 rounded-t-xl object-cover"
-            src="/src/assets/images/hero2.jpg"
+            src="/images/hero2.jpg"
             alt=""
           />
         </div>
@@ -55,7 +56,7 @@ const hero = {
             height={400}
             width={300}
             class="block w-full h-64 lg:h-96 hover:-translate-y-2 transition duration-500 rounded-t-xl object-cover"
-            src="/src/assets/images/hero3.jpg"
+            src="/images/hero3.jpg"
             alt=""
           />
         </div>

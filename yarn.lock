@@ -4171,6 +4171,7 @@ __metadata:
     astro: "npm:^4.12.2"
     astro-icon: "npm:^1.1.0"
     class-variance-authority: "npm:^0.7.0"
+    swiper: "npm:^11.1.9"
     tailwind-merge: "npm:^2.4.0"
     tailwindcss: "npm:^3.4.7"
     tailwindcss-animate: "npm:^1.0.7"
@@ -5452,6 +5453,13 @@ __metadata:
   bin:
     svgo: ./bin/svgo
   checksum: 10c0/cf107e9fa29914504aa65f5f514e16b73aa76adb1c67c84312d3f2402f4bf00b8b6b0d62e3cce247cf16017c24b8191eb003c2f99f8e10844ad8803acb9d806c
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^11.1.9":
+  version: 11.1.9
+  resolution: "swiper@npm:11.1.9"
+  checksum: 10c0/75666f358c78bedf69f3db9ee83c4f4213bf7e87d42708bb3b87a11f7a85da13e73444f670e6ee1d35642a35c889241c8c525033621965345199f42cb141e616
   languageName: node
   linkType: hard
 

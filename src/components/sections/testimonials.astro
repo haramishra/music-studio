@@ -1,154 +1,116 @@
 ---
 import { Image } from "astro:assets";
+import "swiper/css";
+
+const testimonials = [
+  {
+    name: "Alex Johnson",
+    image: "/asitrastudio-assets/testimonials/avatar-square1.png",
+    quote:
+      "Recording at Harmony Hub Studios was an incredible experience. The team was professional and supportive, and the quality of the final product was beyond my expectations. I can't wait to come back!",
+  },
+  {
+    name: "Maria Sanchez",
+    image: "/asitrastudio-assets/testimonials/avatar-square2.png",
+    quote:
+      "The vibe at Sonic Sanctuary is amazing. The jamming space is top-notch, and the staff really knows how to create a comfortable and creative environment. Highly recommend!",
+  },
+  {
+    name: "David Lee",
+    image: "/asitrastudio-assets/testimonials/avatar-square1.png",
+    quote:
+      "Soundwave Studios exceeded all my expectations. The equipment is state-of-the-art, and the sound engineers are incredibly talented. My band and I were thrilled with the results.",
+  },
+  {
+    name: "Emma Watson",
+    image: "/asitrastudio-assets/testimonials/avatar-square2.png",
+    quote:
+      "Groove Garden is the perfect place to bring your musical ideas to life. The atmosphere is inspiring, and the staff is incredibly knowledgeable and helpful. I loved every moment spent here!",
+  },
+];
 ---
 
 <section class="relative py-12 md:py-24 bg-coolGray-50 overflow-hidden">
-  <div class="container mx-auto px-4 mb-20">
+  <div class="container mx-auto px-4 mb-10 md:mb-20">
     <h1 class="font-heading text-6xl md:text-10xl tracking-tighter">
       Testimonials
     </h1>
   </div>
-  <div class="relative">
-    <div class="relative container mx-auto px-4">
-      <div class="md:flex">
-        <div
-          class="md:flex-shrink-0 lg:flex w-full max-w-lg lg:max-w-2xl xl:max-w-4xl mb-20 md:mb-0 md:mr-32"
-        >
-          <div class="md:flex-shrink-0 mb-8 lg:mb-0 lg:mr-16">
-            <Image
-              width={30}
-              height={34}
-              class="block w-24 h-28 mb-6"
-              src="/asitrastudio-assets/testimonials/avatar-square2.png"
-              alt=""
-            />
-            <span class="block">Wade Warren</span>
-            <span class="block text-sm text-coolGray-500"
-              >CEO, Since Industry</span
-            >
+
+  <!-- Slider main container -->
+  <div class="testimonial-slider">
+    <div class="swiper-wrapper container mx-auto px-4">
+      <!-- Slides -->
+      {
+        testimonials.map((testimonial) => (
+          <div class="swiper-slide w-[90%] md:w-full">
+            <div class="  h-60 px-4 md:px-12 py-4 flex flex-col justify-center mx-2  rounded-lg ">
+              <Image
+                width={30}
+                height={34}
+                class="block w-24 h-28 mb-6"
+                src={testimonial.image}
+                alt=""
+              />
+              <div>
+                <p
+                  class="mb-0 text-lg md:text-2xl leading-snug"
+                  set:html={testimonial.quote}
+                />
+              </div>
+
+              <div class="mt-2 font-mono">
+                <span>- </span>
+                <span class="" set:html={testimonial.name} />
+              </div>
+            </div>
           </div>
-          <div class="max-w-lg">
-            <p class="mb-0 text-2xl leading-snug">
-              <span
-                >“KW70 Fix is a leading real estate investment firm in the
-                World, headquartered in</span
-              >
-              <span class="text-coolGray-500"
-                >New York with offices in London, Chicago, Barcelona, Vienna,
-                Rome, Las Vegas.</span
-              >
-              <span
-                >KW70 Fix initiative seeks out regions and markets with robust
-                underlying catalysts, such as burgeoning technology sectors, a
-                diverse workforce, and a strong entrepreneurial culture.</span
-              >
-            </p>
-          </div>
-        </div>
-        <div
-          class="hidden md:flex-shrink-0 md:block lg:flex w-full max-w-lg lg:max-w-2xl xl:max-w-4xl"
-        >
-          <div class="md:flex-shrink-0 mb-8 lg:mb-0 lg:mr-16">
-            <Image
-              width={30}
-              height={34}
-              class="block w-24 h-28 mb-6"
-              src="/asitrastudio-assets/testimonials/avatar-square1.png"
-              alt=""
-            />
-            <span class="block">Wade Warren</span>
-            <span class="block text-sm text-coolGray-500"
-              >CEO, Since Industry</span
-            >
-          </div>
-          <div class="max-w-lg">
-            <p class="mb-0 text-2xl leading-snug">
-              <span
-                >“KW70 Fix is a leading real estate investment firm in the
-                World, headquartered in</span
-              >
-              <span class="text-coolGray-500"
-                >New York with offices in London, Chicago, Barcelona, Vienna,
-                Rome, Las Vegas.</span
-              >
-              <span
-                >KW70 Fix initiative seeks out regions and markets with robust
-                underlying catalysts, such as burgeoning technology sectors, a
-                diverse workforce, and a strong entrepreneurial culture.</span
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="md:hidden mt-20 text-center">
-        <button
-          class="inline-flex w-20 h-20 items-center justify-center text-black hover:text-white bg-white hover:bg-black rounded-full transition duration-200"
-        >
-          <svg
-            width="29"
-            height="29"
-            viewBox="0 0 29 29"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17.4805 7.57104L24.5591 14.6497L17.4805 21.7284"
-              stroke="currentColor"
-              stroke-width="1.74926"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-            <path
-              d="M4.73633 14.6497H24.363"
-              stroke="currentColor"
-              stroke-width="1.74926"
-              stroke-miterlimit="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"></path>
-          </svg>
-        </button>
-      </div>
+        ))
+      }
     </div>
-    <div class="hidden md:block absolute top-0 right-0 h-full">
-      <div class="container px-0 h-full">
-        <div
-          class="absolute top-0 right-0 h-full flex pr-10 items-center justify-end"
-        >
-          <button
-            class="inline-flex w-20 h-20 items-center justify-center text-black hover:text-white bg-white hover:bg-black rounded-full transition duration-200"
-          >
-            <svg
-              width="29"
-              height="29"
-              viewBox="0 0 29 29"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.4805 7.57104L24.5591 14.6497L17.4805 21.7284"
-                stroke="currentColor"
-                stroke-width="1.74926"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-              <path
-                d="M4.73633 14.6497H24.363"
-                stroke="currentColor"
-                stroke-width="1.74926"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
-          </button>
-        </div>
-        <Image
-          width={52}
-          height={52}
-          class="block w-52 lg:w-auto h-full"
-          src="/asitrastudio-assets/testimonials/white-shadow.png"
-          alt=""
-        />
-      </div>
-    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
   </div>
 </section>
+
+<script>
+  import Swiper from "swiper";
+
+  import { Autoplay, Pagination } from "swiper/modules";
+
+  // astro:page-load event is fired when the page is loaded
+  document.addEventListener("astro:page-load", () => {
+    new Swiper(".testimonial-slider", {
+      modules: [Pagination, Autoplay],
+      spaceBetween: 0,
+      loop: true,
+      centeredSlides: false,
+      grabCursor: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+        },
+        992: {
+          slidesPerView: 2,
+        },
+      },
+    });
+  });
+</script>

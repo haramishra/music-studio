@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 
 const content = {
-  title: "Services",
+  title: "Our services",
   description:
     "We offer a range of services to help you at every stage of your musical journey, ensuring your final product is polished and ready for the world to hear.",
   services: [
@@ -30,10 +30,12 @@ const content = {
 
 <section class="py-12 md:py-24 bg-coolGray-50 overflow-hidden">
   <div class="container mx-auto px-4">
-    <h1
-      class="font-heading text-6xl xs:text-8xl sm:text-10xl tracking-tighter mb-20"
-      set:html={content.title}
-    />
+    <div class="mb-16 md:mb-32">
+      <h2
+        class="font-heading text-6xl xl:text-8xl font-bold tracking-tighter"
+        set:html={content.title}
+      />
+    </div>
     <div class="max-w-2xl mx-auto xl:max-w-none">
       <div class="flex flex-wrap -mx-1.5">
         <div class="w-full xl:w-1/2 px-1.5 mb-4 xl:mb-0">

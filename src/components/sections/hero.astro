@@ -14,13 +14,13 @@ const hero = {
 };
 ---
 
-<div class="container mx-auto px-4">
-  <div class="relative mx-auto mb-12 pt-12 pb-64 xs:pb-40 lg:pb-12 border-b">
+<div class="container mx-auto px-4 mb-20">
+  <div class="relative mx-auto mb-12 pt-12 pb-32 lg:pb-12 border-b">
     <h1
       class="font-heading text-5xl sm:text-9xl md:text-10xl xl:text-13xl tracking-tightest"
       set:html={hero.title}
     />
-    <div class="absolute bottom-0 right-0 mb-10 max-w-sm ml-auto text-right">
+    <div class="absolute bottom-0 md:right-0 mb-10 max-w-sm ml-auto text-right">
       <CtaButton
         href="#"
         title="Book a session"

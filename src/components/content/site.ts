@@ -17,10 +17,10 @@ interface MainNavTypes {
 }
 
 const siteMetaContent: SiteMetaContentTypes = {
-  metaTitle: "Asitra Studio",
+  metaTitle: "Astral Studio",
   metaDescription:
     "We are a creative studio that creates beautiful and unique digital experiences for brands and businesses. We specialize in creating engaging and innovative digital products that stand out from the crowd.",
-  url: "https://asitra.studio",
+  url: "kohi.studio",
   ogImage: "/images/header-photo-horizontal.png",
   social: {
     twitter: "@asitrastudio",

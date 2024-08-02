@@ -1,31 +1,32 @@
 ---
 import "swiper/css";
 import ImageMod from "../image-mod.astro";
+import Star from "@/icons/star.astro";
 
 const testimonials = [
   {
-    name: "Alex Johnson",
-    image: "/asitrastudio-assets/testimonials/avatar-square1.png",
+    name: "Rajesh Kumar",
+    image: "https://example.com/images/rajesh-kumar.jpg",
     quote:
-      "Recording at Harmony Hub Studios was an incredible experience. The team was professional and supportive, and the quality of the final product was beyond my expectations. I can't wait to come back!",
+      "Recording at Astral Studio was an incredible experience. The team was professional and supportive, and the quality of the final product was beyond my expectations. I can't wait to come back!",
   },
   {
-    name: "Maria Sanchez",
-    image: "/asitrastudio-assets/testimonials/avatar-square2.png",
+    name: "Priya Sharma",
+    image: "https://example.com/images/priya-sharma.jpg",
     quote:
-      "The vibe at Sonic Sanctuary is amazing. The jamming space is top-notch, and the staff really knows how to create a comfortable and creative environment. Highly recommend!",
+      "The vibe at Astral Studio is amazing. The jamming space is top-notch, and the staff really knows how to create a comfortable and creative environment. Highly recommend!",
   },
   {
-    name: "David Lee",
-    image: "/asitrastudio-assets/testimonials/avatar-square1.png",
+    name: "Amit Patel",
+    image: "https://example.com/images/amit-patel.jpg",
     quote:
-      "Soundwave Studios exceeded all my expectations. The equipment is state-of-the-art, and the sound engineers are incredibly talented. My band and I were thrilled with the results.",
+      "Astral Studio exceeded all my expectations. The equipment is state-of-the-art, and the sound engineers are incredibly talented. My band and I were thrilled with the results.",
   },
   {
-    name: "Emma Watson",
-    image: "/asitrastudio-assets/testimonials/avatar-square2.png",
+    name: "Sneha Rao",
+    image: "https://example.com/images/sneha-rao.jpg",
     quote:
-      "Groove Garden is the perfect place to bring your musical ideas to life. The atmosphere is inspiring, and the staff is incredibly knowledgeable and helpful. I loved every moment spent here!",
+      "Astral Studio is the perfect place to bring your musical ideas to life. The atmosphere is inspiring, and the staff is incredibly knowledgeable and helpful. I loved every moment spent here!",
   },
 ];
 ---
@@ -45,21 +46,28 @@ const testimonials = [
         testimonials.map((testimonial) => (
           <div class="swiper-slide w-[90%] md:w-full">
             <div class=" px-4 md:px-12 py-4 flex flex-col justify-center mx-2  rounded-lg ">
-              <ImageMod
+              {/* <ImageMod
                 width={80}
                 height={96}
                 class="block w-20 h-24 mb-6"
                 src={testimonial.image}
                 alt=""
-              />
+              /> */}
+
               <div>
                 <p
                   class="mb-0 text-lg md:text-xl "
                   set:html={testimonial.quote}
                 />
               </div>
-
-              <div class="mt-2 font-mono">
+              <div class="flex items-center gap-1 m2-2">
+                <Star class="text-yellow-500 w-6 h-6" />
+                <Star class="text-yellow-500 w-6 h-6" />
+                <Star class="text-yellow-500 w-6 h-6" />
+                <Star class="text-yellow-500 w-6 h-6" />
+                <Star class="text-yellow-500 w-6 h-6" />
+              </div>
+              <div class="mt-1 font-mono">
                 <span>- </span>
                 <span class="" set:html={testimonial.name} />
               </div>

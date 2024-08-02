@@ -34,8 +34,8 @@ const hero = {
     <div class="w-full md:w-6/12 lg:w-7/12 px-3 relative">
       <ImageMod
         loading={"eager"}
-        height={400}
-        width={600}
+        widths={[240, 440, 1080]}
+        sizes={`(max-width: 360px) 240px, (max-width: 720px) 440px, (max-width: 1600px) 1080px,`}
         class="block w-full h-64 lg:h-96 hover:-translate-y-2 transition duration-500 rounded-t-xl object-cover"
         src="/images/hero1.jpg"
         alt=""
@@ -45,9 +45,9 @@ const hero = {
       <div class="flex flex-wrap -mx-3">
         <div class="w-5/12 px-3">
           <ImageMod
-            height={400}
+            height={720}
             loading={"eager"}
-            width={200}
+            width={320}
             class="block w-full h-64 lg:h-96 hover:-translate-y-2 transition duration-500 rounded-t-xl object-cover"
             src="/images/hero2.jpg"
             alt=""
@@ -55,7 +55,7 @@ const hero = {
         </div>
         <div class="w-7/12 px-3">
           <ImageMod
-            height={400}
+            height={580}
             width={300}
             loading={"eager"}
             class="block w-full h-64 lg:h-96 hover:-translate-y-2 transition duration-500 rounded-t-xl object-cover"

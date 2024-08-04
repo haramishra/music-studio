@@ -10,9 +10,9 @@ import Contact from "@/components/sections/contact.astro";
 
 <BaseLayout title="Home">
   <Hero />
-  <Portfolio />
+  <Portfolio client:visible />
   <Services />
   <Testimonials />
   <CTA />
-  <Contact />
+  <Contact client:visible />
 </BaseLayout>
